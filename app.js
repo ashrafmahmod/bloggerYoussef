@@ -32,7 +32,8 @@ app.use(
 // Cors Policy
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    // origin: "http://localhost:3000", // local host
+    origin: process.env.CLIENT_DOMAIN, // server
   })
 );
 // Start Routes
